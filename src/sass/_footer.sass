@@ -1,0 +1,55 @@
+// footer
+.footer
+	height: 120px 
+	line-height: 120px 
+	+clr
+	text-align: center
+	border-top: 1px solid $border
+	+md
+		height: 90px 
+		line-height: 90px 
+	+r(1023)
+		height: auto
+		line-height: 1 
+		margin: 0 -15px 
+	+sm
+		margin: 0 -20px 
+		text-align: left
+
+.footer-section
+	+r(1023)
+		padding: 15px 0
+		&:not(:last-child)
+			border-bottom: 1px solid $border
+	+sm
+		&:last-child
+			padding-left: 40px
+	&_left
+		float: left 
+		width: 310px
+		text-align: left
+		img
+			vertical-align: middle
+		+md
+			width: 240px 
+		+r(1023)
+			text-align: center
+			float: none
+			width: auto 
+		+sm
+			text-align: left
+	&_right
+		float: right
+		max-width: 170px 
+		+r(1023)
+			text-align: center
+			float: none
+			max-width: none 
+		+sm
+			.social
+				padding: 3px 35px
+	&_center
+		display: inline-block
+		vertical-align: middle
+		+r(1023)
+			display: block

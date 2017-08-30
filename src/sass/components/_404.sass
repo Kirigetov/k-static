@@ -1,0 +1,66 @@
+.wrap-404
+	position: relative
+	margin-bottom: 80px
+	background-color: #FFE000 
+	+sm
+		margin-bottom: 30px 
+
+@supports (mix-blend-mode: multiply)
+	.wrap-404
+		background: none
+		&:after
+			content: "" 
+			+coverdiv
+			mix-blend-mode: multiply
+			z-index: -1 
+			background-color: #FFE000 
+	.content-404-img
+		z-index: -2 
+			
+.content-404
+	display: flex
+	flex-flow: column nowrap 
+	align-items: center
+	height: 540px 
+	margin-top: 60px
+	+sm
+		margin-top: 0
+		height: 360px  
+		justify-content: space-around 
+	&__title
+		+f(304, 304)
+		color: $white 
+		+bold
+		line-height: 0.8
+		+sm
+			+f(150, 150)
+	&__bottom
+		display: flex
+		margin-top: 40px
+		+sm
+			display: block
+	&__descr
+		max-width: 750px 
+		margin-right: 50px
+		+f(32, 40)
+		color: $grayDark 
+		align-self: flex-end 
+		+semi
+		+sm
+			margin-right: 0
+			+f(20, 24) 
+
+
+.content-404-img
+	height: 100%
+	width: 100%
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	background-size: cover
+	margin-bottom: -100px
+	+sm
+		margin-bottom: -70px

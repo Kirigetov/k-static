@@ -1,0 +1,55 @@
+.tabs
+	margin-bottom: 30px
+	&_border
+		border-top: 1px solid $border
+		padding-top: 45px 
+		+md
+			padding-top: 30px
+	&__head
+		margin-bottom: 15px
+		+clr
+	&__list
+		font-size: 0
+	&__item
+		display: inline-block
+		vertical-align: top
+		&:not(:last-child)
+			margin-right: 20px
+		&:not(.is-active)
+			.tabs__link
+				color: $grayMid 
+	&__link
+		display: block
+		text-decoration: none 
+	&__content
+		display: none
+		&.is-active
+			display: block
+
+.view-show
+	display: none
+	&.is-show
+		display: block
+
+[data-view="list"]
+	+sm
+		display: none
+		&.is-show
+			display: none
+
+[data-view="block"]
+	+sm
+		display: block
+
+.view-filter 
+	float: right
+	+sm
+		display: none
+	&__btn
+		display: inline-block
+		padding: 0 5px
+		color: $grayMid 
+		font-size: 18px
+		background: none
+		&.is-active
+			color: $black 

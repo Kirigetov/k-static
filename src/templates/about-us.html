@@ -1,0 +1,57 @@
+---
+title: About-project
+---
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<div class="main-container main-container_pt">
+
+		<article class="page-article ">
+			<div class="tag tag_mb tag_lg tag_red">калашников медиа</div>
+
+			<h1 class="title-h1 title-h1_mb title-h1_grayDark">О проекте</h1>
+			<h2 class="title-h2 title-h2_grayDark">Концерн является флагманом отечественной стрелковой отрасли, на его долю приходится порядка 95% производства стрелкового оружия России. Продукция Концерна «Калашников» поставляется более чем в 27 стран.</h2>
+
+			<div class="page-cells">
+
+				<div class="page-cell page-cell_left hide-sm">
+					<aside class="page-sidebar">
+						<div class="page-image">
+							<img class="rotate90" src="../img/products/saiga9_v.jpg" alt="">
+						</div>
+					</aside>
+				</div>
+
+				<div class="page-cell page-cell_right">
+					<div class="page-content page-content_no_mb page-content_right">
+						<h3>Цель проекта</h3>
+						<p>Надежность и простота эксплуатации – это то, что делает оружие Концерна «Калашников» уникальным.</p><p> С момента своего основания в 1807 году, Ижевский оружейный завод (ныне Концерн «Калашников») снабжает российскую армию огнестрельным и холодным оружием. Начиная с Отечественной войны 1812 года, ни одна крупная победа России не обходилась без продукции ижевских мастеров.</p><p> Концерн «Калашников» обладает ведущими компетенциями в стране по разработке и производству систем стрелкового вооружения. В настоящее время его конструкторским центром ведутся разработки более чем по 50 перспективным проектам в интересах силовых структур и Минобороны России, а также гражданских заказчиков. Основными из этих проектов являются разработка пистолетов, автоматов, самозарядных снайперских винтовок и автоматических гранатометов.</p>
+
+						<h3>Связаться с нами</h3>
+					
+						<form action="" class="form">
+							<div class="form__inner">
+								<div class="form__field">
+									<input type="text" class="form__input" name='user_name' value='' placeholder="Ваше имя">
+								</div>
+								<div class="form__field form__field_lg_mb">
+									<input type="email" class="form__input" name='user_email' value="" placeholder="Элекронная почта">
+								</div>
+								<div class="form__field form__field_mid_mb">
+									<input type="email" class="form__input" name='user_comment' value="" placeholder="Ваш комментарий">
+								</div>
+
+								<button class="btn btn_block" type="submit">отправить</button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+		</article>
+	
+	</div>
+
+
+{% endblock %}

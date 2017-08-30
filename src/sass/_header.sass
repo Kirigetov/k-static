@@ -1,0 +1,287 @@
+.header 
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 20
+	background: $white 
+	transform: translate3d(0, 0, 0)
+	+md
+		line-height: 60px 
+		height: auto 
+	&.is-covered
+		&:before
+			content: "" 
+			position: absolute
+			+coverdiv
+			background-color: $white 
+			opacity: 0.8
+			z-index: 10 
+	&__inner
+		position: relative
+		width: 100%
+		margin: 0 auto
+		max-width: 1260px
+		padding: 0 15px
+		height: 120px
+		line-height: 120px
+		background: $white 
+		+transition(all .2s linear)
+		.header-small &
+			height: 60px 
+			line-height: 60px
+		+md
+			max-width: 970px 
+			line-height: 90px 
+			height: 90px 
+		+r(1023)
+			line-height: 60px 
+			height: 60px 
+		+sm
+			height: 60px 
+			line-height: 60px 
+			padding: 0 20px  
+			margin: 0
+
+	&__left
+		float: left 
+		width: 270px
+		+transition(width .2s linear)
+		.header-small &
+			width: 200px 
+			+sm
+				width: 180px 
+		a
+			display: block
+		img
+			max-width: 100% 
+			width: 100% 
+			vertical-align: middle
+		+md
+			width: 200px 
+			img
+				// height: 30px 
+		+sm
+			width: 180px 
+			img
+				width: auto 
+				height: 20px
+	&__right
+		float: right
+		max-width: 300px 
+	&__center
+		overflow: hidden
+		+r(1023)
+			position: relative
+			margin: 0 -30px 
+			clear: both
+			text-align: center
+			border-top: 1px solid $border
+
+
+.nav
+	width: 600px 
+	margin: 0 auto
+	+md
+		width: auto 
+		background: $white 
+	&_footer
+		width: 540px 
+		+sm
+			.nav__item
+				display: block
+			width: auto 
+			.nav__link
+				padding: 12px 0 13px
+
+	&__list
+		font-size: 0
+		text-align: center
+	&__item
+		display: inline-block
+		vertical-align: top
+	&__link 
+		display: inline-block
+		vertical-align: middle
+		padding: 0 20px 
+		+f(16, 16)
+		+bold
+		+t(color)
+		letter-spacing: 3.2px
+		text-transform: uppercase
+		text-decoration: none
+		color: $black 
+		+hover 
+			color: $red
+		.icon-arr_corner
+			font-size: 12px
+			margin-top: -5px 
+		+md
+			+f(14, 14)
+			padding: 0 15px 
+			letter-spacing: 1.2px
+		+sm
+			+f(12, 12)
+			// padding: 0 15px 
+			letter-spacing: 1.2px 
+			.icon-arr_corner
+				font-size: 10px
+				margin-top: -3px 
+		+xs
+			+f(11, 11)
+			padding: 0 7px 
+	&__link_red
+		color: $red 
+
+.lang 
+	margin-right: 20px 
+	min-width: 48px 
+
+	&__list
+		display: none
+		position: absolute
+		padding-top: 20px
+		background: $white
+		z-index: 20  
+		&.is-open
+			display: block
+	&__current,
+	li
+		+f(16, 16)
+		+bold
+		+t(color)
+		padding: 5px 10px
+		letter-spacing: 3.2px
+		text-transform: uppercase
+		text-decoration: none
+		color: $black 
+		cursor: pointer
+		+hover 
+			color: $red
+		+sm
+			+f(12, 12)
+	li
+		&.is-active
+			display: none
+.lang,
+.search
+	display: inline-block
+
+.search
+	&_yellow
+		.search-input,
+		search-form__section
+			background: #FFE000  
+	&__drop
+		position: absolute
+		top: 25px
+		left: 15px
+		right: 15px 
+		display: block
+		z-index: 11
+		height: 70px
+		line-height: 70px
+		visibility: hidden 
+		opacity: 0 
+		+transition(all .2s linear)
+		.header-small &
+			top: 0 
+			height: 60px
+			line-height: 60px
+		+md
+			top: 0
+			left: 15px 
+			right: 15px 
+			height: 90px
+			line-height: 90px
+		+r(1023)
+			height: 60px
+			line-height: 60px  
+
+	&.is-open
+		.search__drop
+			visibility: visible
+			opacity: 1
+		.search-form__section
+			&_left,
+			&_right
+				position: absolute
+				top: 50%
+				width: 30px
+				height: 70px
+				z-index: 100
+				transform: translateY(-50%)
+				.header-small &
+					height: 60px
+				+md
+					height: 34px 
+					width: 22px 
+				button
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)  
+					cursor: pointer
+					z-index: 1000 
+					width: 100%
+					height: 100% 
+			&_left
+				left: 0  
+				
+
+			&_right
+				right: 0  
+				
+			&_center
+				display: block
+				overflow: hidden
+		.search-input
+			display: block
+		.close-btn
+			display: block
+
+.search-form
+	height: 100% 
+	&__section
+		display: inline-block
+		line-height: 1 
+
+
+.search-input
+	display: none
+	position: absolute
+	height: 100% 
+	width: 100%
+	padding: 0 60px 
+	+f(64, 70)
+	+bold
+	color: $grayDark 
+
+	+md
+		+f(36, 48)
+	+sm
+		padding: 0 40px
+		+f(28, 28)
+
+.search__btn,
+.close-btn
+	background: none 
+	.icon-search
+		background: none 
+		font-size: 30px
+		vertical-align: middle
+		+sm
+			font-size: 20px
+	.is-open
+		width: 50px 
+		height: 50px 
+
+.close-btn
+	display: none
+	.icon-close
+		font-size: 27px
+		+md
+			font-size: 23px 
+		+sm
+			font-size: 18px
+			

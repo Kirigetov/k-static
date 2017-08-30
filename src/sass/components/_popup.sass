@@ -1,0 +1,92 @@
+.popup
+	position: fixed
+	display: none
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	padding: 260px 40px 20px
+	background: rgba(0, 0, 0, 0.2)
+	min-width: 320px 
+	z-index: 1000 
+	+r(1300)
+		padding: 100px 40px 20px
+	+sm
+		padding: 150px 0 
+	&__inner
+		position: relative
+		max-width: 600px
+		margin: 0 auto 
+		padding: 40px 
+		background: $white 
+		+sm
+			padding: 20px
+		&_pad_mod
+			padding: 0 20px 
+			+sm
+				padding: 0 20px 
+	&__title
+		margin-bottom: 30px
+		+sm
+			padding-right: 30px 
+	&__close
+		position: absolute
+		bottom: 100%
+		left: 100%
+		margin-bottom: 11px 
+		margin-left: 13px
+		+sm
+			top: 20px 
+			right: 20px 
+			left: auto
+			bottom: auto
+			margin: 0 
+	&__close-btn
+		font-size: 30px
+		color: $white 
+		background: none 
+		+sm
+			font-size: 20px
+			color: $black 
+	&__share
+		height: 60px 
+		line-height: 60px
+	&.is-active
+		display: block
+	&_socials
+		padding: 60px 0
+		+sm
+			padding: 60px 0
+		+r(359)
+			padding: 30px 0
+
+.popup-open
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	overflow: hidden
+
+.social-link
+	display: block
+	height: 50px
+	line-height: 50px 
+	margin-bottom: 20px
+	font-size: 16px
+	letter-spacing: 3.2px
+	color: $white 
+	text-decoration: none 
+	text-transform: uppercase
+	text-align: center
+	+bold
+	+sm
+		margin-bottom: 10px
+		font-size: 12px
+		letter-spacing: 1.2px
+	&_fb
+		background-color: #3B5998 
+	&_vk
+		background-color: #45668E 
+	&_ok
+		background-color: #ED812B

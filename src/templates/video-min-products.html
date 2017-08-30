@@ -1,0 +1,548 @@
+---
+title: Video-Min-Products
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<div class="main-container">
+		<!-- BEGIN video container -->
+		<div class="video-container">
+        <div class="row row_videos">
+            <div class="col-100 col-pad">
+                {{cards.cardVideoMain({
+                  wrapperClass: "card-video_online",
+                  sourceVideo: 'http://vjs.zencdn.net/v/oceans',
+                  sourceAttr: 'controls',
+                  cardSize: 'card_lg',
+                  cardTag: 'прямая трансляция',
+                  inlineCss: 'style= "color: #EF0027;"',
+                  cardTagClass: 'tag_lg',
+                  cardOverlay: true,
+                  cardVideoBase: '/img/video.png',
+                  iconPlaySize: 'icon-play_lg',
+                  cardTitleClass: 'title-h1',
+                  cardTitleText: 'Беспилотные комплексы Концерна ZALA борются с браконьерами',
+                  cardDescrClass: 'title-h3 title-h3_white',
+                  cardDescrText: 'Применение беспилотных летательных аппаратов в отечественной промышленности'
+                  })
+                }}
+            </div>
+        </div>
+    </div>
+		<!-- END video container -->
+
+		<!-- BEGIN share -->
+		<div class="share">
+	        <div class="share-info">
+	            {{mixins.icon('share')}}
+	            <span class="share-info__value">12</span>
+	            <span class="share-info__text">поделились</span>
+	        </div>
+	        <div class="socials">
+	            <a href="" class="social social_fb">{{mixins.icon('fb')}}</a>
+	            <a href="" class="social social_vk">{{mixins.icon('vk')}}</a>
+	            <a href="" class="social social_ok">{{mixins.icon('ok')}}</a>
+	            <a href="" class="social social_tw hide-sm">{{mixins.icon('tw')}}</a>
+	            <a href="" class="social social_envelope hide-sm">{{mixins.icon('envelope')}}</a>
+	            <a href="" class="social social_chain hide-sm">{{mixins.icon('chain')}}</a>
+	            <a href="" class="social social_dots show-sm js-popup-open" data-target='socials-mob'>{{mixins.icon('dots')}}</a>
+	        </div>
+	    </div>
+		<!-- END share -->
+
+        <!-- BEGIN rubric-bl -->
+        <div class="rubric-bl rubric-bl_no-border">
+            <div class="rubric-title">Продукты в ролике</div>
+            
+            <div class="row">
+            	<div class="products-slider js-products-slider">
+	                <div class="col-25 col-md-50 col-sm-50 col-xs-full">
+	                    <div class="card card_xs">
+	                      <a href="" class="card__inner card-product">
+	                        <div class="card-product__overlay">
+	                          <img src="../img/products_logo/prodLogo.png" class="card-product__logo" alt="">
+	                          <img src="../img/products/bg-sm.png" class="card-product__img" alt="">
+	                        </div>
+	                        <div class="card__bottom">
+	                          <h3 class="card__title tag tag_grayDark">ZALA 421 08-M</h3>
+	                          <div class="card__arrow">
+	                            {{mixins.icon('arr_right')}}
+	                          </div>
+	                        </div>
+	                      </a>
+	                    </div>
+	                </div>
+
+	                <div class="col-25 col-md-50 col-sm-50 col-xs-full">
+	                    <div class="card card_xs">
+	                      <a href="" class="card__inner card-product">
+	                        <div class="card-product__overlay">
+	                          <img src="../img/products_logo/prodLogo.png" class="card-product__logo" alt="">
+	                          <img src="../img/products/bg-sm.png" class="card-product__img" alt="">
+	                        </div>
+	                        <div class="card__bottom">
+	                          <h3 class="card__title tag tag_grayDark">ZALA 421 08-M</h3>
+	                          <div class="card__arrow">
+	                            {{mixins.icon('arr_right')}}
+	                          </div>
+	                        </div>
+	                      </a>
+	                    </div>
+	                </div>
+
+	                <div class="col-25 col-md-50 col-sm-50 col-xs-full">
+	                    <div class="card card_xs">
+	                      <a href="" class="card__inner card-product">
+	                        <div class="card-product__overlay">
+	                          <img src="../img/products_logo/prodLogo.png" class="card-product__logo" alt="">
+	                          <img src="../img/products/bg-sm.png" class="card-product__img" alt="">
+	                        </div>
+	                        <div class="card__bottom">
+	                          <h3 class="card__title tag tag_grayDark">ZALA 421 08-M</h3>
+	                          <div class="card__arrow">
+	                            {{mixins.icon('arr_right')}}
+	                          </div>
+	                        </div>
+	                      </a>
+	                    </div>
+	                </div>
+
+	                <div class="col-25 col-md-50 col-sm-50 col-xs-full">
+	                    <div class="card card_xs">
+	                      <a href="" class="card__inner card-product">
+	                        <div class="card-product__overlay">
+	                          <img src="../img/products_logo/prodLogo.png" class="card-product__logo" alt="">
+	                          <img src="../img/products/bg-sm.png" class="card-product__img" alt="">
+	                        </div>
+	                        <div class="card__bottom">
+	                          <h3 class="card__title tag tag_grayDark">ZALA 421 08-M</h3>
+	                          <div class="card__arrow">
+	                            {{mixins.icon('arr_right')}}
+	                          </div>
+	                        </div>
+	                      </a>
+	                    </div>
+	                </div>
+
+	                <div class="col-25 col-md-50 col-sm-50 col-xs-full">
+	                    <div class="card card_xs">
+	                      <a href="" class="card__inner card-product">
+	                        <div class="card-product__overlay">
+	                          <img src="../img/products_logo/prodLogo.png" class="card-product__logo" alt="">
+	                          <img src="../img/products/bg-sm.png" class="card-product__img" alt="">
+	                        </div>
+	                        <div class="card__bottom">
+	                          <h3 class="card__title tag tag_grayDark">ZALA 421 08-M</h3>
+	                          <div class="card__arrow">
+	                            {{mixins.icon('arr_right')}}
+	                          </div>
+	                        </div>
+	                      </a>
+	                    </div>
+	                </div>
+				</div>
+			</div>
+		</div>
+		<!-- END rubric-bl -->
+
+		<!-- BEGIN add-info -->
+		<div class="add-info">
+			<div class="add-info__left">
+				<div class="tag-info">
+					<div class="tag-info__date date date_grayMid">4 мая</div>
+					<button class="btn-tag btn-tag_inline">оружие изнутри</button>
+					<button class="btn-tag btn-tag_inline">карабин</button>
+				</div>
+			</div>
+
+			<div class="add-info__right">
+                <div class="comments-container">
+                    <button class="btn btn-toggle btn_block js-toggle" data-text='Скрыть' data-toggle="comments" data-comment-btn='true' >Показать 6 комментариев</button>
+                    <div class="comments js-toggle-block" data-toggle="comments">
+                        <div class="comments__header">
+                            <div class="comments__title">6 комментариев</div>
+                        </div>
+
+                        <div class="comment-section-items">
+                            <section class="comment-thread-renderer">
+                                <div class="comment-renderer">
+                                    <a href="" alt="" class="section-link">
+                                        <div class="comment-author-thumbnail">
+                                            <img src="./img/comment-avatar.jpg" alt="">
+                                        </div>
+                                    </a>
+                                  <div class="comment-renderer-content">
+                                    <div class="comment-renderer-header">
+                                        <a href="" alt="" class="comment-author-text">Вячеслав Константинов</a><span class="comment-renderer-time">23 мая в 12:04</span>
+                                    </div>
+                                    <div class="comment-renderer-text">
+                                      <div class="comment-renderer-text-content">Отлично смонтирован ролик, интересно посмотреть на применение в боевых условиях. Но не могу разобрать, что за аппарат на фото?</div>
+                                    </div>
+                                    <div class="comment-renderer-footer">
+                                      <button class="comment-renderer-reply">Ответить</button>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="comment-renderer">
+                                    <a href="" alt="" class="section-link">
+                                        <div class="comment-author-thumbnail">
+                                            <img src="./img/comment-avatar.jpg" alt="">
+                                        </div>
+                                    </a>
+                                  <div class="comment-renderer-content">
+                                    <div class="comment-renderer-header">
+                                        <a href="" alt="" class="comment-author-text">Вячеслав Константинов</a><span class="comment-renderer-time">23 мая в 12:04</span>
+                                    </div>
+                                    <div class="comment-renderer-text">
+                                      <div class="comment-renderer-text-content">Отлично смонтирован ролик, интересно посмотреть на применение в боевых условиях. Но не могу разобрать, что за аппарат на фото?</div>
+                                    </div>
+                                    <div class="comment-renderer-footer">
+                                      <button class="comment-renderer-reply">Ответить</button>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="comment-replies-renderer">
+                                    <a href="" alt="" class="section-link channel-owner">
+                                        <div class="comment-author-thumbnail">
+                                            <img src="./img/comment-avatar.jpg" alt="">
+                                        </div>
+                                    </a>
+                                  <div class="comment-renderer-content">
+                                    <div class="comment-renderer-header">
+                                        <a href="" alt="" class="comment-author-text">Ildar Zamanov</a><span class="comment-renderer-time">23 мая в 12:04</span>
+                                    </div>
+                                    <div class="comment-renderer-text">
+                                      <div class="comment-renderer-text-content">Отлично смонтирован ролик, интересно посмотреть на применение в боевых условиях. Но не могу разобрать, что за аппарат на фото?</div>
+                                    </div>
+                                    <div class="comment-renderer-footer">
+                                      <button class="comment-renderer-reply">Ответить</button>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="comment-replies-renderer is-respond-to is-last-child">
+                                    <a href="" alt="" class="prev-comment-author">
+                                        <span>{{mixins.icon('share')}}</span>
+                                        <span class="comment-author-text comment-author-text_respond">Ildar Zamanov</span>
+                                    </a>
+                                    
+                                    <a href="" alt="" class="section-link channel-owner">
+                                        <div class="comment-author-thumbnail">
+                                            <img src="./img/comment-avatar.jpg" alt="">
+                                        </div>
+                                    </a>
+                                  <div class="comment-renderer-content">
+                                    <div class="comment-renderer-header">
+                                        <a href="" alt="" class="comment-author-text">Nariman Amanatov</a><span class="comment-renderer-time">23 мая в 12:04</span>
+                                    </div>
+                                    <div class="comment-renderer-text">
+                                      <div class="comment-renderer-text-content">Отлично смонтирован ролик, интересно посмотреть на применение в боевых условиях. Но не могу разобрать, что за аппарат на фото?</div>
+                                    </div>
+                                    <div class="comment-renderer-footer">
+                                      <button class="comment-renderer-reply">Ответить</button>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="comment-renderer">
+                                    <a href="" alt="" class="section-link">
+                                        <div class="comment-author-thumbnail">
+                                            <img src="./img/comment-avatar.jpg" alt="">
+                                        </div>
+                                    </a>
+                                  <div class="comment-renderer-content">
+                                    <div class="comment-renderer-header">
+                                        <a href="" alt="" class="comment-author-text">Вячеслав Константинов</a><span class="comment-renderer-time">23 мая в 12:04</span>
+                                    </div>
+                                    <div class="comment-renderer-text">
+                                      <div class="comment-renderer-text-content">Отлично смонтирован ролик, интересно посмотреть на применение в боевых условиях. Но не могу разобрать, что за аппарат на фото?</div>
+                                    </div>
+                                    <div class="comment-renderer-footer">
+                                      <button class="comment-renderer-reply">Ответить</button>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="comment-replies-renderer">
+                                    <a href="" alt="" class="section-link channel-owner">
+                                        <div class="comment-author-thumbnail">
+                                            <img src="./img/avatar_sm.png" alt="">
+                                        </div>
+                                    </a>
+                                  <div class="comment-renderer-content">
+                                    <div class="comment-renderer-header">
+                                        <a href="" alt="" class="comment-author-text">Концерн «Калашников»</a><span class="comment-renderer-time">23 мая в 12:04</span>
+                                    </div>
+                                    <div class="comment-renderer-text">
+                                      <div class="comment-renderer-text-content">К сожалению, не все оценили данное ружье, поэтому его сняли с производства. Пока планов о возобновлении нет.</div>
+                                    </div>
+                                    <div class="comment-renderer-footer">
+                                      <button class="comment-renderer-reply">Ответить</button>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="comment-renderer is-last-child">
+                                    <a href="" alt="" class="section-link">
+                                        <div class="comment-author-thumbnail">
+                                            <img src="./img/comment-avatar.jpg" alt="">
+                                        </div>
+                                    </a>
+                                  <div class="comment-renderer-content">
+                                    <div class="comment-renderer-header">
+                                        <a href="" alt="" class="comment-author-text">Вячеслав Константинов</a><span class="comment-renderer-time">23 мая в 12:04</span>
+                                    </div>
+                                    <div class="comment-renderer-text">
+                                      <div class="comment-renderer-text-content">Инструмент маркетинга, пренебрегая деталями, консолидирует формат </div>
+                                    </div>
+                                    <div class="comment-renderer-footer">
+                                      <button class="comment-renderer-reply">Ответить</button>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="comment-enter-field">
+                                  <a href="" alt="" class="section-link">
+                                      <div class="comment-author-thumbnail">
+                                          <img src="./img/comment-avatar.jpg" alt="">
+                                      </div>
+                                  </a>
+                                  <form class="comment-renderer-reply-form">
+                                    <textarea cols="30" rows="1" wrap="soft" placeholder="Ваш комментарий"></textarea>
+                                    <button class="comment-renderer-reply">Ответить</button>
+                                  </form>
+                                </div>
+
+                            </section>
+                        </div>
+                        <button class="btn btn_block">оставить комментарий</button>
+                    </div>
+                </div>
+			</div>
+	    </div>
+		<!-- END add-info -->
+
+        <!-- BEGIN rubric-bl -->
+        <div class="rubric-bl rubric-bl_no-border">
+            <div class="rubric-title">Поcледние материалы</div>
+            
+                <div class="row row_trim">
+
+                    <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+                      {{cards.cardVideo({
+                        cardSize: 'card_sm',
+                        sourceVideo: 'http://vjs.zencdn.net/v/oceans',
+                        cardTag: 'звездный расстрел',
+                        cardOverlay: true,
+                        cardVideoBase: '/img/videobg2.jpg',
+                        cardVideoForward: './img/galustyan.png',
+                        iconPlaySize: 'icon-play_mid',
+                        cardTitleClass: 'title-h3',
+                        cardTitleText: 'Выстрел из танка'
+                        })
+                      }}
+                    </div>
+
+                    <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+                        <div class="card card_sm">
+                          <a href="" class="card__inner card-news card-video_news">
+                            <div class="card__overlay">
+                            </div>
+                            <div class="card__pic ">
+                              <div class="card__pic-img" style="background-image: url(../img/kater.png);"></div>
+                              <!-- <img src="../img/kater.png" class="card__img" alt=""> -->
+
+                            </div>
+                            <div class="card__top">
+                              <div class="card__tag tag"><span>выставки</span></div>
+                            </div>
+                            <div class="card__bottom">
+                              <h3 class="card__title title-h3">Концерн представил новый катер «Грачонок»</h3>
+
+                              <div class="card__descr text text_sm text_white ">Беспилотные комплексы Концерна ZALA будут бороться с браконьерами</div>
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+
+                    <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+
+                        <div class="card card_sm">
+                          <a href="" class="card__inner card-gallery">
+                            
+                            <div class="card-gallery__images">
+                              <span class="card-gallery__img" style="background-image: url(../img/image-4.png);" data-order='4'></span>
+                              <span class="card-gallery__img" style="background-image: url(../img/image-3.png);" data-order='3'></span>
+                              <span class="card-gallery__img" style="background-image: url(../img/image-2.png);" data-order='2'></span>
+                              <span class="card-gallery__img " style="background-image: url(../img/image-1.png);" data-order='1'></span>
+                            </div>
+
+                            <div class="card__bottom">
+                                <h3 class="card__title fluid-font-size title-h3_grayDark" data-height="40"><span class="text-red">25 фото</span> с крупнейшей в мире выставки вооружений IDEX-2017</h3>
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+        <!-- END rubric-bl -->
+
+        <!-- BEGIN rubric-bl -->
+        <div class="rubric-bl rubric-bl_no-border">
+            <div class="rubric-title">Интересное</div>
+            
+            <div class="row row_slider">
+                <div class="slider-interest js-slider-interest">
+                    <div class="col-50 col-50_lg col-pad col-xs-full">
+                        {{cards.cardVideo({
+                            cardSize: 'card_mid',
+                            wrapperClass: "card-video_online",
+                            sourceVideo: 'http://vjs.zencdn.net/v/oceans',
+                            cardTag: 'прямая трансляция',
+                            cardTagClass: 'tag_lg',
+                            inlineCss: 'style= "color: #EF0027;"',
+                            cardOverlay: true,
+                            cardVideoBase: '/img/video.png',
+                            iconPlaySize: 'icon-play_lg',
+                            cardTitleText: 'Беспилотные комплексы Концерна ZALA борются с браконьерами'
+                          })
+                        }}
+                    </div>
+                    <div class="col-50 col-50_lg col-pad col-xs-full">
+                        {{cards.cardVideo({
+                          cardSize: 'card_mid',
+                          wrapperClass: "card-video_weapon",
+                          sourceVideo: 'http://vjs.zencdn.net/v/oceans',
+                          cardTag: 'оружие изнутри',
+                          inlineCss: 'style= "color: #222;"',
+                          cardTagIcon: 'ak',
+                          cardOverlay: true,
+                          cardOverlayClass: 'card__overlay_yellow',
+                          cardVideoForward: '/img/ak-full.png',
+                          iconPlaySize: 'icon-play_lg',
+                          cardTitleClass: 'title-h3 title-h3_grayDark',
+                          cardTitleText: 'Беспилотные комплексы Концерна ZALA борются с браконьерами'
+                          })
+                        }}
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="row row_videos">
+
+                <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+                  {{cards.cardVideo({
+                    cardSize: 'card_sm',
+                    sourceVideo: 'http://vjs.zencdn.net/v/oceans',
+                    cardTag: 'звездный расстрел',
+                    cardOverlay: true,
+                    cardVideoBase: '/img/videobg2.jpg',
+                    cardVideoForward: './img/galustyan.png',
+                    iconPlaySize: 'icon-play_mid',
+                    cardTitleClass: 'title-h3',
+                    cardTitleText: 'Выстрел из танка'
+                    })
+                  }}
+                </div>
+
+                <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+                  {{cards.cardVideoMod({
+                    cardSize: 'card_sm',
+                    wrapperClass: "card-video_weapon",
+                    cardTag: 'оружие изнутри',
+                    cardTagClass: 'tag_grayDark',
+                    cardTagIcon: 'ak',
+                    cardOverlay: true,
+                    cardOverlayClass: 'card__overlay_yellow  card__overlay_mod', 
+                    cardVideoForward: './img/gun1.png',
+                    iconPlaySize: 'icon-play_mid',
+                    cardTitleClass: 'title-h3 title-h3_grayDark',
+                    cardTitleText: 'Беспилотные комплексы Концерна ZALA борются с браконьерами'
+                    })
+                  }}
+                </div>
+
+                <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+                    {{cards.cardVideoMod({
+                      cardSize: 'card_sm',
+                      cardTag: 'испытание',
+                      cardOverlay: true,
+                      cardOverlayClass: ' card__overlay_mod', 
+                      cardVideoBase: './img/video2.png',
+                      iconPlaySize: 'icon-play_mid',
+                      cardTitleClass: 'title-h3',
+                      cardTitleText: 'Первые испытания высокоточной снайперской винтовки ВСВ-338'
+                      })
+                    }}
+                </div>
+            </div>
+
+            <div class="row row_left">
+                <div class="slider-news js-slider-news">
+                    <div class="col-25">
+                        <div class="card card_news">
+                          <a href="" class="card__inner card-post card-post_transparent">
+
+                            <div class="card__top">
+                              <div class="card__date date date_red">11 августа</div>
+                              <h3 class="card__title title-h3 title-h3_grayDark">Беспилотные комплексы Концерна ZALA будут бороться с браконьерами</h3>
+
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+                    <div class="col-25">
+                        <div class="card card_news">
+                          <a href="" class="card__inner card-post card-post_transparent">
+
+                            <div class="card__top">
+                              <div class="card__date date date_red">11 августа</div>
+                              <h3 class="card__title title-h3 title-h3_grayDark">Беспилотные комплексы Концерна ZALA будут бороться с браконьерами</h3>
+
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+                    <div class="col-25">
+                        <div class="card card_news">
+                          <a href="" class="card__inner card-post card-post_transparent">
+
+                            <div class="card__top">
+                              <div class="card__date date date_red">11 августа</div>
+                              <h3 class="card__title title-h3 title-h3_grayDark">Беспилотные комплексы Концерна ZALA будут бороться с браконьерами</h3>
+
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+                    <div class="col-25">
+                        <div class="card card_news">
+                          <a href="" class="card__inner card-post card-post_transparent">
+
+                            <div class="card__top">
+                              <div class="card__date date date_red">11 августа</div>
+                              <h3 class="card__title title-h3 title-h3_grayDark">Беспилотные комплексы Концерна ZALA будут бороться с браконьерами</h3>
+
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END rubric-bl -->
+
+		<!-- BEGIN promo-bl -->
+		<div class="promo-bl hide-sm" style="line-height: 300px; background-color: #F5F5F5; text-align: center;">Партнерская реклама в директе
+		</div>
+		<!-- END promo-bl -->
+	</div>
+
+  {% include "partials/_popup_login.html" %}
+  {% include "partials/_popup_socials.html" %}
+
+{% endblock %}

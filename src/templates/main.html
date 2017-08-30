@@ -1,0 +1,428 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    <div class="main-container">
+        <!-- BEGIN video container -->
+        <div class="video-container">
+            <div class="row row_videos">
+                <div class="col-100 col-pad">
+                    {{cards.cardVideoMain({
+                      wrapperClass: "card-video_online",
+                      sourceVideo: 'http://vjs.zencdn.net/v/oceans',
+                      sourceAttr: 'controls',
+                      cardSize: 'card_lg',
+                      cardTag: 'прямая трансляция',
+                      inlineCss: 'style= "color: #EF0027;"',
+                      cardTagClass: 'tag_lg',
+                      cardOverlay: true,
+                      cardVideoBase: '/img/video.png',
+                      iconPlaySize: 'icon-play_lg',
+                      cardTitleClass: 'title-h1',
+                      cardTitleText: 'Беспилотные комплексы Концерна ZALA борются с браконьерами',
+                      cardDescrClass: 'title-h3 title-h3_white',
+                      cardDescrText: 'Применение беспилотных летательных аппаратов в отечественной промышленности'
+                      })
+                    }}
+                </div>
+            </div>
+        </div>
+        <!-- END video container -->
+
+
+        <!-- BEGIN rubric-bl -->
+        <div class="rubric-bl rubric-bl_no-border">
+            <div class="rubric-title">Интересное</div>
+            
+            <div class="row row_slider">
+                <div class="slider-interest js-slider-interest">
+                    <div class="col-50 col-50_lg col-pad col-xs-full">
+                        {{cards.cardVideo({
+                            cardSize: 'card_mid',
+                            wrapperClass: "card-video_online",
+                            sourceVideo: 'http://vjs.zencdn.net/v/oceans',
+                            cardTag: 'прямая трансляция',
+                            cardTagClass: 'tag_lg',
+                            inlineCss: 'style= "color: #EF0027;"',
+                            cardOverlay: true,
+                            cardVideoBase: '/img/video.png',
+                            iconPlaySize: 'icon-play_lg',
+                            cardTitleText: 'Беспилотные комплексы Концерна ZALA борются с браконьерами'
+                          })
+                        }}
+                    </div>
+                    <div class="col-50 col-50_lg col-pad col-xs-full">
+                        {{cards.cardVideo({
+                          cardSize: 'card_mid',
+                          wrapperClass: "card-video_weapon",
+                          sourceVideo: 'http://vjs.zencdn.net/v/oceans',
+                          cardTag: 'оружие изнутри',
+                          inlineCss: 'style= "color: #222;"',
+                          cardTagIcon: 'ak',
+                          cardOverlay: true,
+                          cardOverlayClass: 'card__overlay_yellow',
+                          cardVideoForward: '/img/ak-full.png',
+                          iconPlaySize: 'icon-play_lg',
+                          cardTitleClass: 'title-h3 title-h3_grayDark',
+                          cardTitleText: 'Беспилотные комплексы Концерна ZALA борются с браконьерами'
+                          })
+                        }}
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="row row_videos">
+
+                <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+                  {{cards.cardVideo({
+                    cardSize: 'card_sm',
+                    sourceVideo: 'http://vjs.zencdn.net/v/oceans',
+                    cardTag: 'звездный расстрел',
+                    cardOverlay: true,
+                    cardVideoBase: '/img/videobg2.jpg',
+                    cardVideoForward: './img/galustyan.png',
+                    iconPlaySize: 'icon-play_mid',
+                    cardTitleClass: 'title-h3',
+                    cardTitleText: 'Выстрел из танка'
+                    })
+                  }}
+                </div>
+
+                <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+                  {{cards.cardVideoMod({
+                    cardSize: 'card_sm',
+                    wrapperClass: "card-video_weapon",
+                    cardTag: 'оружие изнутри',
+                    cardTagClass: 'tag_grayDark',
+                    cardTagIcon: 'ak',
+                    cardOverlay: true,
+                    cardOverlayClass: 'card__overlay_yellow  card__overlay_mod', 
+                    cardVideoForward: './img/gun1.png',
+                    iconPlaySize: 'icon-play_mid',
+                    cardTitleClass: 'title-h3 title-h3_grayDark',
+                    cardTitleText: 'Беспилотные комплексы Концерна ZALA борются с браконьерами'
+                    })
+                  }}
+                </div>
+
+                <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+                    {{cards.cardVideoMod({
+                      cardSize: 'card_sm',
+                      cardTag: 'испытание',
+                      cardOverlay: true,
+                      cardOverlayClass: ' card__overlay_mod', 
+                      cardVideoBase: './img/video2.png',
+                      iconPlaySize: 'icon-play_mid',
+                      cardTitleClass: 'title-h3',
+                      cardTitleText: 'Первые испытания высокоточной снайперской винтовки ВСВ-338'
+                      })
+                    }}
+                </div>
+            </div>
+
+            <div class="row row_left">
+                <div class="slider-news js-slider-news">
+                    <div class="col-25">
+                        <div class="card card_news">
+                          <a href="" class="card__inner card-post card-post_transparent">
+
+                            <div class="card__top">
+                              <div class="card__date date date_red">11 августа</div>
+                              <h3 class="card__title title-h3 title-h3_grayDark">Беспилотные комплексы Концерна ZALA будут бороться с браконьерами</h3>
+
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+                    <div class="col-25">
+                        <div class="card card_news">
+                          <a href="" class="card__inner card-post card-post_transparent">
+
+                            <div class="card__top">
+                              <div class="card__date date date_red">11 августа</div>
+                              <h3 class="card__title title-h3 title-h3_grayDark">Беспилотные комплексы Концерна ZALA будут бороться с браконьерами</h3>
+
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+                    <div class="col-25">
+                        <div class="card card_news">
+                          <a href="" class="card__inner card-post card-post_transparent">
+
+                            <div class="card__top">
+                              <div class="card__date date date_red">11 августа</div>
+                              <h3 class="card__title title-h3 title-h3_grayDark">Беспилотные комплексы Концерна ZALA будут бороться с браконьерами</h3>
+
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+                    <div class="col-25">
+                        <div class="card card_news">
+                          <a href="" class="card__inner card-post card-post_transparent">
+
+                            <div class="card__top">
+                              <div class="card__date date date_red">11 августа</div>
+                              <h3 class="card__title title-h3 title-h3_grayDark">Беспилотные комплексы Концерна ZALA будут бороться с браконьерами</h3>
+
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END rubric-bl -->
+
+        <!-- BEGIN rubric-bl -->
+        <div class="rubric-bl rubric-bl_no-border">
+            <div class="rubric-title">Поcледние материалы</div>
+            
+                <div class="row row_trim">
+
+                    <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+                      {{cards.cardVideo({
+                        cardSize: 'card_sm',
+                        sourceVideo: 'http://vjs.zencdn.net/v/oceans',
+                        cardTag: 'звездный расстрел',
+                        cardOverlay: true,
+                        cardVideoBase: '/img/videobg2.jpg',
+                        cardVideoForward: './img/galustyan.png',
+                        iconPlaySize: 'icon-play_mid',
+                        cardTitleClass: 'title-h3',
+                        cardTitleText: 'Выстрел из танка'
+                        })
+                      }}
+                    </div>
+
+                    <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+                        <div class="card card_sm">
+                          <a href="" class="card__inner card-news card-video_news">
+                            <div class="card__overlay">
+                            </div>
+                            <div class="card__pic ">
+                              <div class="card__pic-img" style="background-image: url(../img/kater.png);"></div>
+                              <!-- <img src="../img/kater.png" class="card__img" alt=""> -->
+
+                            </div>
+                            <div class="card__top">
+                              <div class="card__tag tag"><span>выставки</span></div>
+                            </div>
+                            <div class="card__bottom">
+                              <h3 class="card__title title-h3">Концерн представил новый катер «Грачонок»</h3>
+
+                              <div class="card__descr text text_sm text_white ">Беспилотные комплексы Концерна ZALA будут бороться с браконьерами</div>
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+
+                    <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+
+                        <div class="card card_sm">
+                          <a href="" class="card__inner card-gallery">
+                            
+                            <div class="card-gallery__images">
+                              <span class="card-gallery__img" style="background-image: url(../img/image-4.png);" data-order='4'></span>
+                              <span class="card-gallery__img" style="background-image: url(../img/image-3.png);" data-order='3'></span>
+                              <span class="card-gallery__img" style="background-image: url(../img/image-2.png);" data-order='2'></span>
+                              <span class="card-gallery__img " style="background-image: url(../img/image-1.png);" data-order='1'></span>
+                            </div>
+
+                            <div class="card__bottom">
+                                <h3 class="card__title fluid-font-size title-h3_grayDark" data-height="40"><span class="text-red">25 фото</span> с крупнейшей в мире выставки вооружений IDEX-2017</h3>
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+
+                    <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+                        <div class="card card_sm">
+                          <a href="" class="card__inner card-news card-video_news">
+                            <div class="card__overlay">
+                            </div>
+                            <div class="card__pic ">
+                              <div class="card__pic-img" style="background-image: url(../img/kater.png);"></div>
+                              <!-- <img src="../img/kater.png" class="card__img" alt=""> -->
+
+                            </div>
+                            <div class="card__top">
+
+                              <div class="card__tag tag"><span>выставки</span></div>
+
+                            </div>
+                            <div class="card__bottom">
+                              <h3 class="card__title title-h3">Концерн представил новый катер «Грачонок»</h3>
+
+                              <div class="card__descr text text_sm text_white ">Беспилотные комплексы Концерна ZALA будут бороться с браконьерами</div>
+
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+
+                    <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+
+                        <div class="card card_sm">
+                          <a href="" class="card__inner card-gallery">
+                            
+                            <div class="card-gallery__images">
+                              <span class="card-gallery__img" style="background-image: url(../img/image-4.png);" data-order='4'></span>
+                              <span class="card-gallery__img" style="background-image: url(../img/image-3.png);" data-order='3'></span>
+                              <span class="card-gallery__img" style="background-image: url(../img/image-2.png);" data-order='2'></span>
+                              <span class="card-gallery__img " style="background-image: url(../img/image-1.png);" data-order='1'></span>
+                            </div>
+
+                            <div class="card__bottom">
+                                <h3 class="card__title fluid-font-size title-h3_grayDark" data-height="40"><span class="text-red">25 фото</span> с крупнейшей в мире выставки вооружений IDEX-2017</h3>
+                            </div>  
+                          </a>
+                        </div>
+                    </div>
+
+                    <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+                        <div class="card card_sm">
+                          <a href="" class="card__inner card-post card-post_bg">
+                            <div class="card__bottom">
+                              <div class="card__date tag tag_red">11 августа</div>
+                              <h3 class="card__title title-h3 title-h3_grayDark">Беспилотные комплексы Концерна ZALA будут бороться с браконьерами</h3>
+
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+
+                    <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+                        <div class="card card_sm">
+                          <a href="" class="card__inner card-promo">
+                            <div class="card-promo__img" style="background-image: url(../img/fetter.png);">
+                            </div>
+                            <div class="card__top">
+                              <div class="card__tag tag " style="color: #EF0027;"><span>промо</span></div>
+                              <div class="card-promo__logo"><img src="../img/fetter-logo.png" alt=""></div>
+                            </div>
+                            <div class="card__bottom">
+                              <h3 class="card__title title-h3 title-h3_grayDark">Магнум Феттер 76 ММ от <span class="text-red">24 рублей</span></h3>
+                              <div class="card__arrow">
+                                {{mixins.icon('arr_right')}}
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+
+                    <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+
+                        <div class="card card_sm">
+                          <a href="" class="card__inner blog-post">
+                            
+                            <div class="card__top">
+                              <div class="blog-post__header">
+                                <div class="blog-post__avatar">
+                                  <img src="../img/avatar.png" alt="">
+                                </div>
+                                <div class="blog-post__data">
+                                  <div class="card__date blog-post__date tag tag_red">11 августа</div> 
+                                  <h3 class="blog-post__author ">Tomas Mitrofanov</h3>
+                                </div> 
+                              </div>
+                            </div>
+                            <div class="card__bottom">
+                              <div class="blog-post__body">
+                                <h3 class="blog-post__title title-h3 title-h3_grayDark">Про «Арк»</h3>
+                                <div class="blog-post__content">С моей точки зрения платформа AR-15 является одной из самых успешных из того, что доступно в формате гражданской винтовки/карабина</div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+
+                    <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+                        <div class="card card_sm">
+                          <a href="" class="card__inner card-news card-video_news">
+                            <div class="card__overlay">
+                            </div>
+                            <div class="card__pic ">
+                              <div class="card__pic-img" style="background-image: url(../img/kater.png);"></div>
+                              <!-- <img src="../img/kater.png" class="card__img" alt=""> -->
+
+                            </div>
+                            <div class="card__top">
+                              <div class="card__tag tag"><span>выставки</span></div>
+                            </div>
+                            <div class="card__bottom">
+                              <h3 class="card__title title-h3">Концерн представил новый катер «Грачонок»</h3>
+
+                              <div class="card__descr text text_sm text_white ">Беспилотные комплексы Концерна ZALA будут бороться с браконьерами</div>
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+
+                    <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+                        {{cards.cardVideoMod({
+                          cardSize: 'card_sm',
+                          wrapperClass: "video-wrapper_sm card-without-fields",
+                          cardOverlay: true,
+                          cardVideoBase: './img/vystavka.png',
+                          iconPlaySize: 'icon-play_mid',
+                          cardTitleClass: 'title-h3',
+                          cardLabel: './img/label-logo.png',
+                          cardTitleText: 'Концерн представил новый катер «Грачонок»'
+                          })
+                        }}
+
+                    </div>
+
+                    <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+
+                        {{cards.cardVideoMod({
+                          cardSize: 'card_sm',
+                          wrapperClass: "card-without-fields",
+                          cardTag: 'испытание',
+                          cardOverlay: true,
+                          cardVideoBase: './img/video2.png',
+                          iconPlaySize: 'icon-play_mid',
+                          cardTitleClass: 'title-h3',
+                          cardTitleText: 'Первые испытания высокоточной снайперской винтовки ВСВ-338'
+                          })
+                        }}
+                    </div>
+
+                    <div class="col-33 col-pad col-lsm-50 col-sm-50 col-xs-full">
+                        <div class="card card_sm">
+                          <a href="" class="card__inner card-news card-video_news">
+                            <div class="card__overlay">
+                            </div>
+                            <div class="card__pic ">
+                              <div class="card__pic-img" style="background-image: url(../img/kater.png);"></div>
+                              <!-- <img src="../img/kater.png" class="card__img" alt=""> -->
+
+                            </div>
+                            <div class="card__top">
+                              <div class="card__tag tag"><span>выставки</span></div>
+                            </div>
+                            <div class="card__bottom">
+                              <h3 class="card__title title-h3">Концерн представил новый катер «Грачонок»</h3>
+
+                              <div class="card__descr text text_sm text_white ">Беспилотные комплексы Концерна ZALA будут бороться с браконьерами</div>
+                            </div>
+                          </a>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+        <!-- END rubric-bl -->
+
+        <button class="btn btn-toggle btn_block">Показать еще</button>
+
+    </div>
+
+  {% include "partials/_popup_socials.html" %}
+
+{% endblock %}

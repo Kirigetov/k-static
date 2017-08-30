@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "iconfont";
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot?#iefix') format('eot'),
+    url('../fonts/iconfont.woff2') format('woff2'),
+    url('../fonts/iconfont.woff') format('woff'),
+    url('../fonts/iconfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$icon-ak: "\EA01";
+$icon-arr_corner: "\EA02";
+$icon-arr_right: "\EA03";
+$icon-arr_slide: "\EA04";
+$icon-arrow-circle: "\EA05";
+$icon-blocks: "\EA06";
+$icon-chain: "\EA07";
+$icon-close: "\EA08";
+$icon-contact: "\EA09";
+$icon-dots: "\EA0A";
+$icon-envelope: "\EA0B";
+$icon-fb: "\EA0C";
+$icon-list: "\EA0D";
+$icon-ok: "\EA0E";
+$icon-play: "\EA0F";
+$icon-rubric: "\EA10";
+$icon-search: "\EA11";
+$icon-share: "\EA12";
+$icon-tile: "\EA13";
+$icon-tw: "\EA14";
+$icon-vk: "\EA15";
+$icon-ytb: "\EA16";
+
+
+%icon {
+  font-family: "iconfont";
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: auto;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {
+  @extend %icon;
+  display: inline-block;
+}
+
+.icon-ak:before { content: $icon-ak; }
+.icon-arr_corner:before { content: $icon-arr_corner; }
+.icon-arr_right:before { content: $icon-arr_right; }
+.icon-arr_slide:before { content: $icon-arr_slide; }
+.icon-arrow-circle:before { content: $icon-arrow-circle; }
+.icon-blocks:before { content: $icon-blocks; }
+.icon-chain:before { content: $icon-chain; }
+.icon-close:before { content: $icon-close; }
+.icon-contact:before { content: $icon-contact; }
+.icon-dots:before { content: $icon-dots; }
+.icon-envelope:before { content: $icon-envelope; }
+.icon-fb:before { content: $icon-fb; }
+.icon-list:before { content: $icon-list; }
+.icon-ok:before { content: $icon-ok; }
+.icon-play:before { content: $icon-play; }
+.icon-rubric:before { content: $icon-rubric; }
+.icon-search:before { content: $icon-search; }
+.icon-share:before { content: $icon-share; }
+.icon-tile:before { content: $icon-tile; }
+.icon-tw:before { content: $icon-tw; }
+.icon-vk:before { content: $icon-vk; }
+.icon-ytb:before { content: $icon-ytb; }
+

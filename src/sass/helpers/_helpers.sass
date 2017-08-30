@@ -1,0 +1,106 @@
+@function em($size, $context: 16)
+  @return ($size/$context) * 1em
+
+@function img-url($image)
+  @return url('../img/#{$image}')
+
+
+/* BEGIN functions for fluid font sizes  */
+@function strip-unit($number)
+  @if type-of($number) == 'number' and not unitless($number)
+    @return $number / ($number * 0 + 1)
+
+  @return $number
+
+@function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px)
+  $f-min: strip-unit($f-min)
+  $f-max: strip-unit($f-max)
+  $w-min: strip-unit($w-min)
+  $w-max: strip-unit($w-max)
+  
+  $k: ($f-max - $f-min)/($w-max - $w-min)
+  $b: $f-min - $k * $w-min
+
+  $b: $b + $units
+
+  @return calc( #{$k} * 100vw + #{$b} )
+
+@mixin fluidFontSize($f-min, $f-max, $w-min, $w-max)
+
+    font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px)  
+
+/* END functions for fluid font sizes  */ 
+
+
+=image($image)
+  background-image: img-url($image)
+
+=trans($what: all, $dur: 0.2s, $easing: ease)
+  transition: $what $dur $easing
+
+=smooth-scroll
+  -webkit-overflow-scrolling: touch
+
+=smooth-font
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+=gpu
+  transform: translate3d(0,0,0)
+
+=md
+  +r(1439)
+    @content
+
+=lsm
+  +r(1023)
+    @content
+
+=sm
+  +r(767)
+    @content
+
+=xs
+  +r(599)
+    @content
+
+=from-md
+  +rmin($r-md + 1)
+    @content
+
+=from-sm
+  +rmin($r-sm + 1)
+    @content
+
+=from-xs
+  +rmin($r-xs + 1)
+    @content
+
+
+=f($size: null, $line-height: null, $spacing: null)
+  @if $size != null
+    font-size: $size + px
+  @if $line-height != null
+    line-height: (ceil(($line-height / $size)*100)/100)
+  @if $spacing != null
+    letter-spacing: ($spacing / $size) + em
+
+=hover
+  .no-touch &
+    &:hover
+      @content
+
+=active
+  .no-touch &
+    &:active
+      @content
+  &:active
+    @content
+
+=no-touch
+  .no-touch &
+    @content
+  @content
+
+=t($what)
+  transition: $what 0.25s ease

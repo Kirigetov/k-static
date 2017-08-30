@@ -1,0 +1,47 @@
+---
+title: Index page
+
+indexPage: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<style>
+		li{
+			margin-bottom: 20px;
+		}
+
+		a{
+			font-size: 24px;
+			color: #222;
+			text-decoration: none;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+	</style>
+
+	<div class="main-container">
+
+		<h1>Страницы</h1>
+
+		<ul>
+			<li><a href="main.html">Главная страница</a></li>
+			<li><a href="video-min.html">Страница видео</a></li>
+			<li><a href="video-min-products.html">Страница видео с продуктом</a></li>
+			<li><a href="video-med.html">Страница медиа-видео</a></li>
+			<li><a href="news-item.html">Страница новости</a></li>
+			<li><a href="videos.html">Страница с видео</a></li>
+			<li><a href="blogs.html">Страница с блогами</a></li>
+			<li><a href="authors-blog.html">Авторский блог</a></li>
+			<li><a href="blog-post.html">Блог пост</a></li>
+			<li><a href="tag-result.html">Поиск по тегу</a></li>
+			<li><a href="product-item.html">Страница товара</a></li>
+			<li><a href="about-us.html">О проекте</a></li>
+		</ul>
+
+	</div>
+
+
+{% endblock %}

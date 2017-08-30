@@ -1,0 +1,278 @@
+.icon
+  vertical-align: middle
+
+.share
+  padding: 25px 0 
+  margin-bottom: 50px
+  border-bottom: 1px solid $border
+  +sm
+    margin: 0 -20px 30px
+    padding: 10px 20px 20px
+  .share-info,
+  .socials
+      display: inline-block
+      vertical-align: middle
+  .share-info
+    margin-right: 15px
+    +sm
+      margin-right: 5px 
+  &_mod
+    margin-bottom: 0
+    padding: 0 
+    border-bottom: none
+    +sm
+      padding: 15px 20px
+      border-top: 1px solid $border 
+      border-bottom: 1px solid $border
+  &_border
+    border-top: 1px solid $border 
+    
+  &_border_top
+    border-bottom: none 
+    border-top: 1px solid $border 
+  &_sm_mgb
+    +sm
+      margin-bottom: 20px
+  &_no_mgb
+    margin-bottom: 0
+    +sm
+     margin-bottom: 0
+  &_mgt
+    margin-top: 50px
+    +md
+        margin-top: 30px 
+    +sm
+        margin-top: 20px
+
+.share-info
+  &__value,
+  &__text
+    vertical-align: middle
+    +f(16, 16)
+    letter-spacing: 3.2px
+    text-transform: uppercase
+    color: $black
+    +bold
+    +sm
+      color: $grayMid 
+  &__text
+    +sm
+      +f(13, 13)
+      display: none  
+  &__value
+    margin-right: 10px
+    +sm
+      +f(12, 12)
+
+  .icon-share
+    margin-right: 10px
+    font-size: 11px
+    color: currentColor
+    +sm
+      color: $grayMid 
+
+.share-info_popup
+  +sm
+    .share-info__text
+      display: inline-block
+    .share-info__value,
+    .share-info__text
+      +f(10, 10)
+      letter-spacing: 2px 
+      
+    .share-info__value,
+    .share-info__text,
+    .icon-share
+      color: $black 
+
+.socials-btns
+  display: table
+  margin-bottom: 30px
+  +sm
+    margin: 0 
+  .social
+    display: table-cell
+    width: 136px
+    height: 50px
+    vertical-align: middle  
+    text-align: center
+    border: 1px solid $border
+    +t(background-color)
+    .icon
+      vertical-align: sub 
+      +t(fill)
+    &:not(:first-child)
+      border-left: none
+    &_fb
+      color: #3B5998  
+      .icon
+        color: currentColor
+    &_vk
+      color: #45668E
+      .icon
+        color: currentColor
+    &_ok
+      color: #ED812B
+      .icon
+        color: currentColor
+    &_tw
+      color: #1DA1F2
+      .icon
+        color: currentColor
+    &_env
+      color: $grayMid  
+      .icon
+        color: currentColor
+    &_chain
+      color: $grayMid 
+
+      .icon
+        vertical-align: sub
+        color: currentColor 
+
+    &:hover
+      background-color: $red
+      border-color: $red
+      color: $white
+      .icon
+        fill: $white
+    +sm
+      border: none
+      display: inline-block
+      width: auto 
+      height: 28px
+      line-height: 1 
+      &:after
+        content: "" 
+        position: relative
+        display: inline-block
+        height: 100% 
+        vertical-align: middle
+      &__count
+        display: none
+      .icon
+        fill: $grayMid 
+        vertical-align: middle
+
+.social
+  display: inline-block
+  padding: 0px 15px
+  text-decoration: none
+  color: $grayMid
+  
+  &__inner
+    position: relative
+    display: inline-block
+  &__count
+    color: currentColor
+    +t(color)
+    +extra
+    font-size: 12px
+    vertical-align: middle
+    margin-left: 10px 
+  &:after
+    content: "" 
+    position: relative
+    display: inline-block
+    height: 100% 
+    vertical-align: middle
+  +sm
+    padding: 3px 16px 
+    &:last-child
+      .share &
+        padding-right: 0 
+  &_fb,
+  &_vk,
+  &_ok,
+  &_tw,
+  &_envelope,
+  &_chain,
+  &_dots
+    .icon
+      vertical-align: middle
+      // color: $grayMid
+      +t(color)
+
+  &_fb
+    .icon
+      font-size: 15px
+    &:hover
+      .icon
+        color: #3B5998
+  
+  &_vk
+    .icon
+      font-size: 13px
+    &:hover
+      .icon
+        color: #45668E
+  
+  &_ok
+    .icon
+      font-size: 18px
+    &:hover
+      .icon
+        color: #ED812B
+
+  &_tw
+    .icon
+      font-size: 15px
+    &:hover
+      .icon
+        color: #1DA1F2
+
+  &_envelope
+    .icon
+      font-size: 15px
+    &:hover
+      .icon
+        color: $black  
+
+  &_chain
+    .icon
+      font-size: 15px
+    &:hover
+      .icon
+        color: $black  
+  &_ytb  
+    .icon
+      font-size: 15px
+    &:hover
+      .icon
+        color: #DA2724 
+  &_dots
+    .icon
+      font-size: 12px
+      +sm
+        font-size: 5px
+
+.social_black
+    .icon
+      color: $black 
+
+.socials_popup
+  .social
+    position: relative
+    display: block
+    border-bottom: 1px solid $border
+    text-align: center
+    height: 60px 
+    &__count
+      position: absolute
+      top: 50%
+      left: 100% 
+      margin-top: -4px 
+    .icon-fb
+      font-size: 18px
+    .icon-ok
+      font-size: 20px
+    .icon-chain
+      font-size: 20px
+.social_rotate
+  float: right
+  transform: rotate(90deg)
+  padding: 3px 0
+  +sm
+    padding: 3px 0 
+  .icon
+    font-size: 5px

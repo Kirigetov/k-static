@@ -1,0 +1,160 @@
+// typography
+h1,
+h3,
+.title-h1,
+.title-h3
+    +bold
+
+h1,
+.title-h1 
+    +f(64, 70)
+    color: $white 
+    +md
+        +f(46, 52)
+    +sm
+        +f(24, 26)
+    &_grayDark
+        color: $grayDark
+    &_mb
+        margin-bottom: 20px
+    &_mb_mid
+        margin-bottom: 35px
+        +sm
+            margin-bottom: 15px
+
+h2,
+.title-h2 
+    +f(32, 40)
+    +semi
+    color: $white
+    +md 
+        +f(20, 20)
+    &_grayDark
+        color: $grayDark
+    &_red
+        color: $red 
+    &_mb
+        margin-bottom: 20px
+
+h3,
+.title-h3 
+    +f(24, 24)
+    color: $white
+    +t(color)
+    &_grayDark
+        color: $grayDark
+    &_red
+        color: $red 
+    
+    +md
+        +f(20, 20)
+
+.title-h3
+    &.title-h3_white
+        color: $white 
+
+p, .text 
+    +f(20, 35)
+    +reg
+    color: $black
+    +sm
+        +f(16, 24)
+
+    &_sm  
+        +f(16, 20)
+        +semi
+    &_white
+        color: $white 
+    &_bold
+        +bold
+
+p + h3
+    margin-top: 20px 
+    
+h3 + p
+    margin-top: 10px
+
+p + p
+    margin-top: 20px
+
+.text-red
+    color: $red 
+
+.tag,
+.date
+    +f(12, 12)
+    +extra
+    +t(color)
+    max-width: 150px 
+    letter-spacing: 2.2px
+    color: $white 
+    text-transform: uppercase
+    +sm
+        +f(10, 10)
+        letter-spacing: 2px 
+    span
+        display: inline-block
+        vertical-align: middle
+        max-width: 100px
+        text-transform: uppercase
+    &_grayMid
+        color: $grayMid
+    &_grayDark
+        color: $grayDark 
+    &_red
+        color: $red
+    &_lg
+        +f(16, 16)
+        +bold
+        max-width: 350px 
+        letter-spacing: 3.2px 
+        text-transform: uppercase
+        span
+            max-width: 300px 
+        +sm
+            +f(10, 10)
+            letter-spacing: 2px 
+    &_mb
+        margin-bottom: 5px
+
+.nav-tag,
+.rubric-title 
+    display: inline-block
+    vertical-align: middle
+    +f(16, 16)
+    +bold
+    +t(color)
+    letter-spacing: 3.2px
+    text-transform: uppercase
+    text-decoration: none
+    color: $black 
+    +hover 
+        color: $red
+    +md
+        +f(14, 14)
+        letter-spacing: 1.2px
+    +sm
+        +f(12, 12)
+
+.rubric-title
+    // margin-bottom: 15px
+    &_pad   
+        padding: 0 15px
+        +sm
+            padding: 0 10px  
+    +sm
+        margin-bottom: 10px
+
+.fluid-font-size
+  +r(1440)
+    +rmin(1024)
+        +fluidFontSize(18px, 24px, 1024px, 1440px)
+  +md
+    +rmin(800)
+        +fluidFontSize(11px, 18px, 480px, 1023px)
+  +r(799)
+    +rmin(768)
+        +fluidFontSize(10px, 18px, 480px, 1023px)
+  +r(767)
+    +rmin(320)
+        +fluidFontSize(16px, 18px, 480px, 1023px)

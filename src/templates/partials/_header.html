@@ -1,0 +1,49 @@
+<!-- BEGIN header -->
+<div class="header js-header">
+	<div class="header__inner">
+		<div class="header__left">
+			<a href="">
+				<img src="../img/logo.svg" alt="Логотип">
+			</a>
+		</div>
+		<div class="header__right">
+
+			<div class="lang js-dropBlock">
+				<div class="lang__current js-dropInput" data-toggle='lang'>EN</div>
+				<ul class="lang__list js-dropdown" data-toggle='lang'>
+					<li class="is-active js-dropdown-item">EN</li>
+					<li class="js-dropdown-item">RU</li>
+					<li class="js-dropdown-item">FR</li>
+				</ul>
+			</div>
+
+			<div class="search js-search-container">
+				<button class="search__btn js-search-btn">{{mixins.icon('search')}}</button>
+				<div class="search__drop">
+					<form action="" class="search-form">
+						<div class="search-form__section search-form__section_left">
+							<button class="search__btn">{{mixins.icon('search')}}</button>
+						</div>
+						<div class="search-form__section search-form__section_right">
+							<button class="close-btn js-close-btn">{{mixins.icon('close')}}</button>
+						</div>
+						<div class="search-form__section search-form__section_center">
+							<input type="text" class="search-input js-search-input" autofocus>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="header__center">
+			<nav class="nav">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="" class="nav__link">видео</a></li>
+					<li class="nav__item"><a href="" class="nav__link">новости</a></li>
+					<li class="nav__item"><a href="" class="nav__link">блоги</a></li>
+					<li class="nav__item"><a href="" class="nav__link nav__link_red">магазин {{mixins.icon('arr_corner')}}</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<!-- END header -->

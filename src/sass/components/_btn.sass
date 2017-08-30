@@ -1,0 +1,97 @@
+.tags
+  margin-bottom: 50px 
+  &_sm_mgb
+      +sm
+          margin-bottom: 30px 
+
+.btn-tag
+  padding: 8px 10px
+  background: $grayLight
+  font-size: 11px
+  letter-spacing: 2.2px
+  text-transform: uppercase
+  color: $grayMid
+  +reg
+  +bold
+  transition: color 0.2s, background-color 0.2s
+  +hover
+    background-color: $red 
+    color: $white 
+  &_inline
+    width: auto
+    min-width: auto
+    margin-bottom: 10px 
+    padding: 8px 27px 9px
+    &:not(:last-child)
+      margin-right: 6px 
+    
+
+.btn
+  max-width: 390px 
+  width: 100% 
+  padding: 15px 0
+  background: $grayLight
+  border-radius: 2px
+  border: 1px solid transparent
+  font-size: 16px
+  letter-spacing: 3.2px
+  text-transform: uppercase
+  color: $black
+  +bold
+  transition: color 0.2s, background-color 0.2s
+  +hover
+    border: 1px solid $border
+  +active
+    color: $grayMid
+  &_block
+    display: block
+    max-width: none 
+  &_white
+    background-color: $white 
+  +sm
+    padding: 16px 0 17px 
+    font-size: 12px
+    letter-spacing: 2.2px 
+  &.is-hidden
+    display: none
+
+.btn-toggle 
+  margin-bottom: 10px 
+  &.is-open
+    position: absolute
+    top: 0
+    right: 0  
+    z-index: 10   
+    display: inline-block
+    width: auto
+    padding: 0
+    color: $grayMid 
+    background: none 
+    +bold
+    +f(16, 16)
+    letter-spacing: 2.2px 
+    text-transform: uppercase 
+    +sm
+      +f(12, 12)
+
+.plain-pic
+  display: inline-block
+  padding: 0 5px
+
+  .icon
+    vertical-align: middle
+  .icon-arr_right
+    font-style: 20px
+  .icon-search
+    font-size: 20px
+  .icon-ak
+    font-size: 35px
+  .icon-close
+    font-size: 25px
+  .icon-arr_corner
+    color: $red
+    font-size: 11px
+    vertical-align: top
+
+.more-link  
+  margin-top: 20px

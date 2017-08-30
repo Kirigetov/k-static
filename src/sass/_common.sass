@@ -1,0 +1,56 @@
+html, body
+  height: 100%!important
+  min-height: 100%!important
+
+body
+  background: #FFF
+  font-size: 16px
+  line-height: 1.4
+  +reg
+  color: $black
+
+.inner
+  position: relative
+  max-width: 1260px
+  margin: 0 auto 
+  padding: 0 15px
+  +md
+    max-width: 970px 
+  +sm
+    padding: 0 20px  
+
+.out
+  padding-top: 105px
+  overflow: hidden
+  +transition(padding-top .2s linear)
+  +md
+    padding-top: 75px 
+  +r(1023)
+    padding-top: 110px
+  +sm
+    padding-top: 120px
+  &.header-small
+    padding-top: 90px 
+
+.hidden, [hidden]
+  display: none
+
+.hide-md
+  +md
+    display: none!important
+
+.hide-sm
+  +sm
+    display: none!important
+
+.hide-xs
+  +xs
+    display: none!important
+
+.show-sm
+  +from-sm
+    display: none!important
+
+.show-md
+  +from-md
+    display: none!important

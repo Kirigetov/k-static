@@ -1,0 +1,172 @@
+{% import "mixins/_common.html" as mixins %}
+
+{% macro cardVideo(config) %}
+	<div class="card {% if config.cardSize %}{{config.cardSize}}{% endif %} ">
+		<a href="" class="card-video {% if config.wrapperClass %}{{config.wrapperClass}}{% endif %} js-players" {% if config.inlineCss %}{{config.inlineCss}}{% endif %}>
+		    <video class="video-js vjs-default-skin placeholder " {% if config.sourceAttr %}{{config.sourceAttr}}{% endif %} muted preload="auto" width="100%"
+		      data-setup="{}">
+		        <source src="{{config.sourceVideo}}.mp4" type='video/mp4'>
+		        <source src="{{config.sourceVideo}}.webm" type='video/webm'>
+		        <source src="{{config.sourceVideo}}.theora.ogv" type="video/ogg">
+		        <p class="vjs-no-js">
+		          To view this video please enable JavaScript, and consider upgrading to a web browser that
+		        </p>
+		    </video>
+
+		    <div class="videojs-hero-overlay card">
+
+				<div class="card__video-bg">
+
+					{% if config.cardVideoBase %}
+						<div class="card__video-base">
+			                <img src="{{config.cardVideoBase}}" class="card__video-img" alt="">
+						</div>
+					{% endif %}
+
+					{% if config.cardVideoForward %}
+						<div class="card__video-forward">
+							<img src="{{config.cardVideoForward}}" class="card__img" alt="">
+						</div>
+					{% endif %}
+
+	                <svg class="icon icon-play {% if config.iconPlaySize %}{{config.iconPlaySize}}{% endif %}"><use xlink:href="img/sprite.svg#icon-play"></use></svg>
+	            </div>
+
+		        <div class="card__top">
+		          <div class="card__tag tag {% if config.cardTagClass %}{{config.cardTagClass}}{% endif %}" {% if config.inlineCss %}{{config.inlineCss | safe}}{% endif %}>
+		          	{% if config.cardTagIcon %}
+		          		{{ mixins.icon(config.cardTagIcon) }}
+		          	{% endif %}
+		          	<span>{{config.cardTag}}</span> 
+		          </div>
+
+		          {% if config.cardLabel %}
+		          	<div class="card__label"><img src="{{config.cardLabel}}" alt=""></div>
+		          {% endif %}
+		        </div>
+				
+				{% if config.cardOverlay %}
+		        	<div class="card__overlay card__overlay_mod {% if config.cardOverlayClass %}{{config.cardOverlayClass}}{% endif %}"></div>
+				{% endif %}
+
+
+		        <div class="card__bottom">
+		          <h3 class="card__title {% if config.cardTitleClass %}{{config.cardTitleClass}}{% endif %}">{% if config.cardTitleText %}{{config.cardTitleText}}{% endif %}</h3>
+
+		          <div class="card__descr text {% if config.cardDescrClass %}{{config.cardDescrClass}}{% endif %}">{{config.cardDescrText}}</div>
+		        </div>
+		    </div>
+		</a> 
+	</div> 
+{% endmacro %}
+
+{% macro cardVideoMod(config) %}
+	<div class="card {% if config.cardSize %}{{config.cardSize}}{% endif %}">
+		<a href="" class="card-video {% if config.wrapperClass %}{{config.wrapperClass}}{% endif %}" {% if config.inlineCss %}{{config.inlineCss}}{% endif %}>
+
+		    <div class="videojs-hero-overlay card">
+
+				<div class="card__video-bg">
+
+					{% if config.cardVideoBase %}
+						<div class="card__video-base">
+			                <img src="{{config.cardVideoBase}}" class="card__video-img" alt="">
+						</div>
+					{% endif %}
+
+					{% if config.cardVideoForward %}
+						<div class="card__video-forward">
+							<img src="{{config.cardVideoForward}}" class="card__img" alt="">
+						</div>
+					{% endif %}
+
+	                <svg class="icon icon-play {% if config.iconPlaySize %}{{config.iconPlaySize}}{% endif %}"><use xlink:href="img/sprite.svg#icon-play"></use></svg>
+	            </div>
+ 
+		        <div class="card__top">
+		          <div class="card__tag tag {% if config.cardTagClass %}{{config.cardTagClass}}{% endif %}">
+		          	{% if config.cardTagIcon %}
+		          		{{ mixins.icon(config.cardTagIcon) }}
+		          	{% endif %}
+		          	<span>{{config.cardTag}}</span> 
+		          </div>
+
+		          {% if config.cardLabel %}
+		          	<div class="card__label"><img src="{{config.cardLabel}}" alt=""></div>
+		          {% endif %}
+		        </div>
+				
+				{% if config.cardOverlay %}
+		        	<div class="card__overlay {% if config.cardOverlayClass %}{{config.cardOverlayClass}}{% endif %}"></div>
+				{% endif %}
+
+
+		        <div class="card__bottom">
+		          <h3 class="card__title {% if config.cardTitleClass %}{{config.cardTitleClass}}{% endif %}">{% if config.cardTitleText %}{{config.cardTitleText}}{% endif %}</h3>
+
+		          <div class="card__descr text {% if config.cardDescrClass %}{{config.cardDescrClass}}{% endif %}">{{config.cardDescrText}}</div>
+		        </div>
+		    </div>
+		</a> 
+	</div> 
+{% endmacro %}
+ 
+{% macro cardVideoMain(config) %}
+	<div class="card card_lg">
+		<div class="card-video card-video_main js-player-main {% if config.wrapperClass %}{{config.wrapperClass}}{% endif %} js-players">
+		    <video class="video-js vjs-default-skin placeholder " {% if config.sourceAttr %}{{config.sourceAttr}}{% endif %} muted preload="auto" width="100%"
+				   data-setup='{"nativeControlsForTouch" : true}'>
+		        <source src="{{config.sourceVideo}}.mp4" type='video/mp4'>
+		        <source src="{{config.sourceVideo}}.webm" type='video/webm'>
+		        <source src="{{config.sourceVideo}}.theora.ogv" type="video/ogg">
+		        <p class="vjs-no-js">
+		          To view this video please enable JavaScript, and consider upgrading to a web browser that
+		        </p>
+		    </video>
+
+		    <div class="videojs-hero-overlay card">
+
+				<div class="card__video-bg">
+
+					{% if config.cardVideoBase %}
+						<div class="card__video-base">
+			                <img src="{{config.cardVideoBase}}" class="card__video-img" alt="">
+						</div>
+					{% endif %}
+
+					{% if config.cardVideoForward %}
+						<div class="card__video-forward">
+							<img src="{{config.cardVideoForward}}" class="card__img" alt="">
+						</div>
+					{% endif %}
+
+	                <svg class="icon icon-play {% if config.iconPlaySize %}{{config.iconPlaySize}}{% endif %}"><use xlink:href="img/sprite.svg#icon-play"></use></svg>
+	            </div>
+
+		        <div class="card__top">
+		          <div class="card__tag tag {% if config.cardTagClass %}{{config.cardTagClass}}{% endif %}" {% if config.inlineCss %}{{config.inlineCss | safe}}{% endif %}>
+		          	{% if config.cardTagIcon %}
+		          		{{ mixins.icon(config.cardTagIcon) }}
+		          	{% endif %}
+		          	<span>{{config.cardTag}}</span> 
+		          </div>
+
+		          {% if config.cardLabel %}
+		          	<div class="card__label"><img src="{{config.cardLabel}}" alt=""></div>
+		          {% endif %}
+		        </div>
+				
+				{% if config.cardOverlay %}
+		        	<div class="card__overlay card__overlay_mod {% if config.cardOverlayClass %}{{config.cardOverlayClass}}{% endif %}"></div>
+				{% endif %}
+
+
+		        <div class="card__bottom">
+		          <h1 class="card__title {% if config.cardTitleClass %}{{config.cardTitleClass}}{% endif %}">{% if config.cardTitleText %}{{config.cardTitleText}}{% endif %}</h1>
+
+		          <div class="card__descr text {% if config.cardDescrClass %}{{config.cardDescrClass}}{% endif %}">{{config.cardDescrText}}</div>
+		        </div>
+		    </div>
+		</div> 
+	</div> 
+{% endmacro %}

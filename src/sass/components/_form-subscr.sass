@@ -1,0 +1,75 @@
+.form-subscr
+	position: relative
+	&:before
+		content: "" 
+		position: absolute
+		height: 200px
+		background: $grayLight
+		z-index: -1
+		width: 100%  
+		+md
+			height: 100%
+			 
+	&__inner
+		margin: 50px auto
+		padding: 20px 65px 20px
+		+clr
+		+md
+			padding: 20px
+	&__img
+		float: left
+		width: 330px 
+		vertical-align: top
+		margin-left: -20px 
+		img
+			width: 100% 
+			margin-top: -80px
+		+md
+			width: 250px 
+			img
+				margin-top: -10px 
+		+sm
+			display: none
+	&__title
+		margin-bottom: 20px 
+	&__descr
+		margin-bottom: 20px
+		+f(16, 18)
+		color: $black
+		+semi 
+	&__body
+		overflow: hidden
+	&__content
+		max-width: 420px
+
+.form-field
+	font-size: 0
+	.form-subscr__input,
+	.form-subscr__btn,
+		display: inline-block
+		vertical-align: top
+		width: 50% 
+		+md	
+			display: block
+			width: 100% 
+	.form-subscr__input
+		+md
+			margin-bottom: 20px
+	.form-subscr__btn
+		padding-left: 30px 
+		+md
+			padding-left: 0 
+	input
+		width: 100% 
+		border-bottom: 1px solid #CECECE
+		background: none 
+		padding: 17px 0
+		+extra
+		+f(16, 16)
+		letter-spacing: 2.6px
+		text-transform: uppercase
+		color: $grayMid 
+		+placeholder
+			+f(13, 13)
+	button
+		max-width: none 

@@ -1,0 +1,112 @@
+$column-sizes: 12, 16, 20, 21.5, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 33, 34, 35, 39, 40, 41, 48, 50, 52, 55, 57, 59, 60, 65, 70, 73, 75, 80, 85, 90, 95, 100
+
+%col
+	position: relative
+	padding: 0 15px
+	+sm
+		padding: 0 10px 
+
+@each $size in $column-sizes
+	.col-#{round($size)}
+		@extend %col
+		width: $size * 1%
+
+.col-sm-full
+	+sm
+		width: 100%
+		max-width: 500px
+		margin-left: auto
+		margin-right: auto
+		padding: 0 
+
+.col-pad
+	padding: 15px 15px 0 
+
+.col-33
+	@extend %col
+	// max-width: 420px // 390px + 30px padding
+	width: 33.333% 
+
+.col-50
+	@extend %col
+	// max-width: 630px // 600px + 30px padding
+	width: 50% 
+	&.col-50_lg
+		+sm
+			max-width: 320px 
+		+r(359)
+			max-width: 280px 
+.col-25
+	@extend %col
+	width: 25% 
+
+.col-md-50
+	@extend %col
+	+md
+		width: 50% 
+
+.col-lsm-50
+	@extend %col
+	+lsm
+		width: 50% 
+		
+.col-sm-50
+	@extend %col
+	+sm
+		width: 50% 
+
+.col-xs-full
+	+xs
+		width: 100%
+		max-width: 100%
+		margin-left: auto
+		margin-right: auto
+
+.row
+	margin: 0 -15px 0
+	+clr
+	font-size: 0
+	+md
+		margin: 0px -15px 0
+	+sm
+		margin: 0px -10px 0
+	&_trim
+		margin-bottom: -30px 
+		+md
+			margin-bottom: -30px
+		+sm
+			margin-bottom: -15px
+	&_videos
+		+sm
+			margin: 0 -20px 
+		
+
+	@each $size in $column-sizes
+		.col-#{round($size)}
+			float: left
+			+sm
+				&.col-sm-full
+					float: none
+	& + &
+		margin-top: 30px 
+		+sm
+			margin-top: 15px
+	&_left
+		+sm
+			margin: 0 0 0 -10px
+	&_slider
+		+sm
+			margin: 0 -20px 0 -15px
+
+.row_mg_no
+	margin: 0
+
+.col-pad
+	&_no
+		padding: 0!important
+
+.card-col
+	@extend %col
+	max-width: 315px
+	+sm
+		padding: 0 5px  
